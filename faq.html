@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ - BLOXVERSE</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body class="subpage">
+
+  <!-- HEADER -->
+  <header class="main-header">
+    <a href="index.html" class="logo">
+  BLOXVERSE
+</a>
+
+
+    <div class="header-actions">
+      <a href="index.html" class="mini-btn">Codes</a>
+      <a href="wiki.html" class="mini-btn">Wiki</a>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="legal-page">
+
+    <header class="legal-header">
+      <h1>Frequently Asked Questions</h1>
+      <p class="legal-sub">
+        Everything you need to know about BLOXVERSE.
+      </p>
+    </header>
+
+    <div class="faq-container">
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Are the codes free?
+          <span>+</span>
+        </button>
+        <div class="faq-answer">
+          Yes. All Roblox codes listed on BLOXVERSE are free and officially released by game developers.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          How often are codes updated?
+          <span>+</span>
+        </button>
+        <div class="faq-answer">
+          We check and update codes regularly to ensure they are accurate and working.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Why is a code not working?
+          <span>+</span>
+        </button>
+        <div class="faq-answer">
+          Codes may expire at any time. Make sure you enter them exactly as shown, including capitalization.
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <script>
+    document.querySelectorAll(".faq-question").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const answer = btn.nextElementSibling;
+        const icon = btn.querySelector("span");
+
+        answer.classList.toggle("open");
+
+        if (answer.classList.contains("open")) {
+          icon.textContent = "–";
+        } else {
+          icon.textContent = "+";
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
